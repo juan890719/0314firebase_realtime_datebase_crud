@@ -1,18 +1,18 @@
 package com.tom.firebase_real_time_ex2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnSubmit, btnUpdate, btnRemove;
+    private Button btnSubmit, btnUpdate, btnRemove, btnRead;
     private EditText etPosition, etName;
 
     @Override
@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         etName = findViewById(R.id.et_name);
         etPosition = findViewById(R.id.et_position);
         btnSubmit = findViewById(R.id.btn_submit);
+        btnRead = findViewById(R.id.btn_read);
         btnUpdate = findViewById(R.id.btn_update);
         btnRemove = findViewById(R.id.btn_remove);
         DAOEmployee dao = new DAOEmployee();
@@ -40,6 +41,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // 讀取
+        btnRead.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dao.read("-My5S9e2iMqZHorjYiVT");
+            }
+        });
+
         // 更新
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 HashMap<String, Object> hashMap = new HashMap<>();
                 hashMap.put("name", etName.getText().toString());
                 hashMap.put("position", etPosition.getText().toString());
-                dao.update("-My5S-mEdwRMHObKV96P", hashMap).addOnSuccessListener(suc -> {
+                dao.update("-My5S9e2iMqZHorjYiVT", hashMap).addOnSuccessListener(suc -> {
                     Toast.makeText(MainActivity.this, "Record is updated", Toast.LENGTH_SHORT).show();
                 }).addOnFailureListener(er -> {
                     Toast.makeText(MainActivity.this, "" + er.getMessage(), Toast.LENGTH_SHORT).show();
@@ -59,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         btnRemove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dao.remove("-My5S-mEdwRMHObKV96P").addOnSuccessListener(suc -> {
+                dao.remove("-My5S9e2iMqZHorjYiVT").addOnSuccessListener(suc -> {
                     Toast.makeText(MainActivity.this, "Record is removed", Toast.LENGTH_SHORT).show();
                 }).addOnFailureListener(er -> {
                     Toast.makeText(MainActivity.this, "" + er.getMessage(), Toast.LENGTH_SHORT).show();

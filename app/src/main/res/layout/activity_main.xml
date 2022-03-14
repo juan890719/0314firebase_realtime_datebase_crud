@@ -46,21 +46,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Submit" />
+            android:text="Submit"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Read"
+            android:textSize="12sp" />
 
         <Button
             android:id="@+id/btn_update"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Update" />
+            android:text="Update"
+            android:textSize="12sp" />
 
         <Button
             android:id="@+id/btn_remove"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Remove" />
+            android:text="Remove"
+            android:textSize="12sp" />
     </LinearLayout>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

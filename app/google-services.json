@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "43976430486",
+    "project_id": "fir-real-time-ex2",
+    "storage_bucket": "fir-real-time-ex2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:43976430486:android:80194bd1758dabb0b543b7",
+        "android_client_info": {
+          "package_name": "com.tom.firebase_real_time_ex2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "43976430486-488a2sc4fgln533t5p45eomj85qh6sc7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXLvj-rDuMhLPGGw-GjtSzNISJbLhuJxc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "43976430486-488a2sc4fgln533t5p45eomj85qh6sc7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
